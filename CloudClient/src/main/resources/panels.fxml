@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="center" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.geekbrains.CloudClient.PanelController">
+
+
+    <HBox>
+        <ComboBox fx:id="repoBox" onAction="#selectDirAction"/>
+        <TextField fx:id="pathField" editable="false" HBox.hgrow="ALWAYS" />
+        <Button text="Up to" onAction="#buttonPathAction"/>
+    </HBox>
+
+    <TableView fx:id="filesTable" fixedCellSize="-1.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS" />
+
+
+    <properties>
+        <controllerReference><fx:reference source="controller"/></controllerReference>
+    </properties>
+
+</VBox>
