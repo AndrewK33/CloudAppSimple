@@ -19,19 +19,19 @@ public class Controller {
     @FXML
     VBox leftPanel, rightPanel;
 
-    private NetworkWorker networkWorker;
-
+    //private NetworkWorker networkWorker;
 
 
     public void exitAction(ActionEvent event) {
         Platform.exit();
     }
 
+
     public void copyAction(ActionEvent event) {
         PanelController leftPanelC = (PanelController) leftPanel.getProperties().get("controllerReference");
         PanelController rightPanelC = (PanelController) rightPanel.getProperties().get("controllerReference");
 
-        if(leftPanelC.getSelectedFilename() == null && rightPanelC.getSelectedFilename() == null) {
+        if (leftPanelC.getSelectedFilename() == null && rightPanelC.getSelectedFilename() == null) {
             Alert alert = new Alert(Alert.AlertType.ERROR, "No files was selected", ButtonType.OK);
             alert.showAndWait();
             return;
@@ -39,12 +39,12 @@ public class Controller {
 
         PanelController sourcePanelC = null, destinationPanelC = null;
 
-        if(leftPanelC.getSelectedFilename() != null) {
+        if (leftPanelC.getSelectedFilename() != null) {
             sourcePanelC = leftPanelC;
             destinationPanelC = rightPanelC;
         }
 
-        if(rightPanelC.getSelectedFilename() != null) {
+        if (rightPanelC.getSelectedFilename() != null) {
             sourcePanelC = rightPanelC;
             destinationPanelC = leftPanelC;
         }

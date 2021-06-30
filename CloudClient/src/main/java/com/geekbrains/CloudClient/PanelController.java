@@ -72,6 +72,7 @@ public class PanelController implements Initializable {
             };
         });
 
+
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
         TableColumn<FileInfo, String> fileDateTimeColumn = new TableColumn<>("Last modified data");
         fileDateTimeColumn.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getLastModified().format(dtf)));
@@ -79,6 +80,9 @@ public class PanelController implements Initializable {
 
         filesTable.getColumns().addAll(fileTypeColumn, fileNameColumn, fileSizeColumn, fileDateTimeColumn);
         filesTable.getSortOrder().add(fileTypeColumn);
+
+
+
 
         filesTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -91,7 +95,6 @@ public class PanelController implements Initializable {
                 }
             }
         });
-
         updateList(Paths.get("."));
     }
 
@@ -122,6 +125,8 @@ public class PanelController implements Initializable {
     }
 
 
+
+
     public void buttonPathAction(ActionEvent event) {
         Path topPath = Paths.get(pathField.getText()).getParent();
         if (topPath != null) {
@@ -129,10 +134,15 @@ public class PanelController implements Initializable {
         }
     }
 
+
+
     public void selectDirAction(ActionEvent event) {
         ComboBox<String> boxElement = (ComboBox<String>) event.getSource();
         updateList(Paths.get(boxElement.getSelectionModel().getSelectedItem()));
     }
+
+
+
 
 
     public String getSelectedFilename() {
@@ -141,6 +151,8 @@ public class PanelController implements Initializable {
         }
         return filesTable.getSelectionModel().getSelectedItem().getFilename();
     }
+
+
 
 
     public String getCurrentPath() {
