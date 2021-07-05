@@ -1,4 +1,6 @@
-package com.geekbrains.CloudServer;
+package com.geekbrains.CloudServer.Interface.Impl;
+
+import com.geekbrains.CloudServer.Interface.Command;
 
 import java.io.File;
 

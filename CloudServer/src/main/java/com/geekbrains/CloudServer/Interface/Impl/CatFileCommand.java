@@ -1,4 +1,7 @@
-package com.geekbrains.CloudServer;
+package com.geekbrains.CloudServer.Interface.Impl;
+
+import com.geekbrains.CloudServer.Interface.Command;
+import com.geekbrains.CloudServer.Interface.SelfResponseFlag;
 
 import java.io.File;
 import java.io.IOException;

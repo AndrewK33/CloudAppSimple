@@ -1,4 +1,9 @@
-package com.geekbrains.CloudServer;
+package com.geekbrains.CloudServer.core;
+
+import com.geekbrains.CloudServer.Interface.Command;
+import com.geekbrains.CloudServer.Interface.Impl.CatFileCommand;
+import com.geekbrains.CloudServer.Interface.Impl.ListDirectoryCommand;
+import com.geekbrains.CloudServer.Interface.Impl.PingFileCommand;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,6 +15,7 @@ public class CommandProcessor {
         {
             put("ls", new ListDirectoryCommand());
             put("cat", new CatFileCommand());
+            put("ping", new PingFileCommand());
         }
     };
 

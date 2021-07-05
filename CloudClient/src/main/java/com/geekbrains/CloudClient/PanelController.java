@@ -82,8 +82,6 @@ public class PanelController implements Initializable {
         filesTable.getSortOrder().add(fileTypeColumn);
 
 
-
-
         filesTable.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent event) {

@@ -1,4 +1,4 @@
-package com.geekbrains.CloudServer;
+package com.geekbrains.CloudServer.core;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;

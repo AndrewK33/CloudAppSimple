@@ -1,9 +1,10 @@
 package com.geekbrains.CloudServer;
 
+import com.geekbrains.CloudServer.Interface.Impl.CatFileCommand;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static com.geekbrains.CloudServer.Command.EOC;
+import static com.geekbrains.CloudServer.Interface.Command.EOC;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CatFileCommandTest {

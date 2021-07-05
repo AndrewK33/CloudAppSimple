@@ -1,4 +1,4 @@
-package com.geekbrains.CloudServer;
+package com.geekbrains.CloudServer.core;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
